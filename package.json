@@ -1,14 +1,18 @@
 {
+  "homepage": "https://Hrishita-Shah.github.io/Portfolio_Resume",
   "name": "portfolio_resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run  server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "build": "cd client && npm install && npm run build",
+    "postinstall": "npm install"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "gh-pages": "^5.0.0",
     "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1"
   }
