@@ -6,7 +6,7 @@ I have developed a portfolio website to showcase my work, and it's really cool b
 1. Fork the repository to your GitHub account.
 2. Clone the repository to your local machine using the following command:
    ```
-      git clone <URL of the repository>
+      git clone [<URL of the repository>](https://github.com/Hrishita-Shah/Portfolio_Resume.git)
    ```
 
 ## Running the Application
@@ -52,6 +52,6 @@ If you'd like to contribute to this project, please follow these steps:
 4. Open a pull request to the original repository from your fork.
 
 ## License
-```
+
 This project is licensed under the [MIT License](LICENSE).
 ```
