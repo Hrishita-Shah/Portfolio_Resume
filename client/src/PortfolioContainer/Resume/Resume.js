@@ -62,18 +62,26 @@ const Resume = (props) => {
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
-      duration: { fromDate: "June", toDate: "2023" },
+      duration: { fromDate: "July", toDate: "2023" },
       description:
         "Developed an Interactive and Fully Responsive Portfolio Website with Email Capability.",
       subHeading: "Technologies Used: React JS, Bootstrap, RxJS, NodeJS.",
     },
     {
-      title: "The Placement Management System",
-      duration: { fromDate: "May", toDate: "2023" },
+      title: "Movie Recommendation System",
+      duration: { fromDate: "June", toDate: "2023" },
       description:
-        "The Placement Management System that automates college placement cells with user and admin modules",
+        "Designed an ML Project on a content-based filtered movie recommender system using cosine similarity",
       subHeading:
-        "Technologies Used: MERN Stack - MongoDB, Express, React, Node, HTML, CSS.",
+        "Technologies Used:  Python: Streamlit, Panda, Numpy, Requests libraries.",
+    },
+    {
+      title: "Operating System Simulation GUI - Banker’s Algorithm",
+      duration: { fromDate: "May", toDate: "2022" },
+      description:
+        "Banker’s Algorithm: resource allocation and deadlock detection for optimal OS performance.",
+      subHeading:
+        "Technologies Used: HTML, CSS, JavaScript.",
     },
     {
       title: "Perusing the Indian Aviation Industry",
@@ -82,14 +90,6 @@ const Resume = (props) => {
         "A static website made to show the comprehensive study of the Indian aviation industry and its conclusions",
       subHeading:
         "Technologies Used: HTML5, CSS3, Bootstrap, Tableau.",
-    },
-    {
-      title: "DPS School Database Management System",
-      duration: { fromDate: "Oct", toDate: "2022" },
-      description:
-        "Designed an inclusive School Database that stores and manages data related to academia & instructors.",
-      subHeading:
-        "Technologies Used: MySQL, Python.",
     },
   ];
 
