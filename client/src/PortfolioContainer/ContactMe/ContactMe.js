@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
 import axios from 'axios'
 import {toast} from 'react-toastify'
 
@@ -104,9 +104,8 @@ export default function ContactMe(props) {
             <div className='central-form'>
                 <div className='contact-info'>
                     <h2 className='title'>
-                        <Typical
-                            loop={Infinity}
-                            steps={[
+                        <TypeAnimation
+                            sequence={[
                                 "Get In Touch 📧",
                                 2000,
                                 "Email Me ... 📧",
@@ -114,6 +113,8 @@ export default function ContactMe(props) {
                                 "Get your Job Done ✅",
                                 2000,
                             ]}
+                            repeat={Infinity}
+                            cursor={true}
                         />
                     </h2>
                     
