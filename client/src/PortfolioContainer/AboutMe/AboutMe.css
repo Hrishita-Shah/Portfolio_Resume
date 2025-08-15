@@ -3,16 +3,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px 0 0 0;
+    margin: 5px 0 0 0; /* Match ContactMe margin */
+    background: var(--soft-blue); /* Add cyan blue background like ContactMe */
+    min-height: 100vh; /* Ensure full height coverage */
+    padding: 40px 0; /* Add padding for spacing */
 }
+
 .about-me-parent{
     max-width: 1000px;
     width: 70%;
 }
+
 .about-me-card{
     display: flex;
     width: 100%;
-    box-shadow: 0 0px 20px -2px var(--text-blue-gray);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); /* Match ContactMe shadow */
+    background: var(--white); /* Ensure card is white */
+    border-radius: 20px; /* Add rounded corners like ContactMe */
+    overflow: hidden; /* Ensure rounded corners work */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.about-me-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--primary-teal));
+    z-index: 1;
 }
 .about-me-profile{
     width: 50%;

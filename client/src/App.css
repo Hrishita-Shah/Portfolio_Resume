@@ -33,3 +33,8 @@
   --loader-color: #0CBFAE
 }
 
+/* Remove sticky footer - let it appear naturally when scrolling */
+.App {
+  min-height: 100vh;
+}
+

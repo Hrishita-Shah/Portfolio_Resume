@@ -3,14 +3,32 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-height: fit-content;
-    margin: 120px 0;
-    
+    min-height: 100vh; /* Ensure full height coverage */
+    margin: 5px 0 0 0; /* Match ContactMe margin */
+    background: var(--soft-blue); /* Add cyan blue background like ContactMe */
+    padding: 40px 0; /* Add padding for spacing */
 }
+
 .resume-card {
     display: flex;
     height: 360px;
     width: 1000px;
+    background: var(--white); /* Ensure card is white */
+    border-radius: 20px; /* Add rounded corners like ContactMe */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); /* Match ContactMe shadow */
+    overflow: hidden; /* Ensure rounded corners work */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.resume-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--primary-teal));
+    z-index: 1;
 }
   
 .resume-bullets {

@@ -153,4 +153,6 @@ body ::-webkit-scrollbar-thumb {
   transition: all 0.8s ease;
 }
 
+/* Footer will appear naturally when scrolling to bottom */
+
 

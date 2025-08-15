@@ -1,6 +1,6 @@
 .main-container {
     min-height: 100vh; 
-    margin: 100px 0 -450px 0;
+    margin: 5px 0 5px 0; /* Remove negative margin - let footer appear naturally below */
     background: var(--soft-blue);
 }
 
@@ -281,7 +281,7 @@
 
 @media screen and (max-width: 768px) {
     .main-container {
-        margin: 80px 0 -450px 0;
+        margin: 80px 0 0 0; /* Remove negative margin on mobile too */
     }
     
     .central-form {

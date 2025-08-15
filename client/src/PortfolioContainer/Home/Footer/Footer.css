@@ -3,10 +3,10 @@
     background: linear-gradient(135deg, var(--text-blue-gray) 0%, #34495e 100%);
     color: var(--white);
     padding: 60px 0 0 0;
-    margin-top: 0;
+    margin-top: 0; /* Remove auto margin - let footer appear naturally */
     overflow: hidden;
     width: 100%;
-
+    min-height: 300px; /* Keep minimum height for footer */
 }
 
 
@@ -161,6 +161,8 @@
     position: relative;
     z-index: 2;
 }
+
+/* Footer will appear naturally when scrolling to bottom */
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {

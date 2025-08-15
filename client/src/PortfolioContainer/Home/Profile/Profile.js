@@ -1,5 +1,4 @@
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import React from "react";import { TypeAnimation } from "react-type-animation";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 
