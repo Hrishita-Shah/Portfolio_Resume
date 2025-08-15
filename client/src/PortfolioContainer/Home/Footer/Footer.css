@@ -1,0 +1,221 @@
+.footer-container {
+    position: relative;
+    background: linear-gradient(135deg, var(--text-blue-gray) 0%, #34495e 100%);
+    color: var(--white);
+    padding: 60px 0 0 0;
+    margin-top: 0;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    font-family: "Poppins Bold";
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--primary-coral), var(--primary-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    font-family: "Poppins SemiBold";
+    margin-bottom: 20px;
+    color: var(--primary-teal);
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-section ul li a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: var(--primary-coral);
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-coral);
+    padding-left: 20px;
+}
+
+.footer-section ul li a:hover::before {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--primary-coral), var(--primary-teal));
+    border-radius: 50%;
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-links i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+}
+
+.footer-shape svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        padding: 40px 0 0 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-container {
+        padding: 30px 0 0 0;
+    }
+    
+    .footer-content {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-links i {
+        font-size: 1rem;
+    }
+}

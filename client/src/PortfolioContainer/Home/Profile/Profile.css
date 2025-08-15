@@ -1,0 +1,332 @@
+.profile-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    min-height: fit-content;
+    background: transparent;
+    position: relative;
+}
+
+.profile-parent {
+    display: flex;
+    align-items: center;
+    color: var(--text-blue-gray);
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    gap: 60px;
+}
+
+.profile-details {
+    flex: 1;
+    text-align: left;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-details-name {
+    font-size: 2.5rem;
+    font-family: "Poppins SemiBold";
+    margin-bottom: 20px;
+    color: var(--text-blue-gray);
+}
+
+.profile-details-role {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 30px 0;
+}
+
+.profile-details-role h1{
+    font-size: 2.2rem;
+    font-family: "Poppins Bold";
+    color: var(--text-blue-gray);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.primary-text {
+    color: var(--text-blue-gray);
+}
+
+.highlighted-text {
+    color: var(--primary-coral);
+    position: relative;
+    display: inline-block;
+}
+
+.highlighted-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--primary-teal));
+    border-radius: 2px;
+    transform: scaleX(0);
+    animation: underline 2s ease-in-out infinite;
+}
+
+@keyframes underline {
+    0%, 100% { transform: scaleX(0); }
+    50% { transform: scaleX(1); }
+}
+
+.profile-role-tagline {
+    font-size: 1.1rem;
+    margin: 15px 0 0 0;
+    font-family: "Poppins Light";
+    color: var(--text-blue-gray);
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.profile-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-options .primary-btn {
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.profile-options .primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+}
+
+.profile-options .highlighted-btn {
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.profile-options .highlighted-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    background-color: var(--light-coral);
+}
+
+.profile-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: 0;
+    position: relative;
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.profile-picture::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, var(--primary-coral), var(--primary-teal), var(--light-coral));
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-picture-background {
+    height: 95%;
+    width: 95%;
+    background-image: url("../../../assets/Home/Profilepic.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid white;
+    transition: all 0.3s ease;
+}
+
+.profile-picture-background:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.colz {
+    margin-bottom: 30px;
+}
+
+.colz .colz-icon {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.colz .colz-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-coral), var(--primary-teal));
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.colz .colz-icon a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.colz .colz-icon i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.colz .colz-icon a:hover i {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1110px) {
+    .profile-parent {
+        gap: 40px;
+        padding: 0 15px;
+    }
+    
+    .profile-picture{
+        height: 350px;
+        width: 350px;
+    }
+    
+    .profile-details-name{
+        font-size: 2rem;
+    }
+    
+    .profile-details-role h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-options .btn{
+        width: 140px;
+        padding: 12px 0;
+    }   
+}
+
+@media screen and (max-width: 910px) {
+    .profile-picture{
+        height: 300px;
+        width: 300px;
+    }
+    
+    .profile-details-name {
+        font-size: 1.8rem;
+    }
+    
+    .profile-details-role h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .profile-container {
+        height: auto;
+        padding: 40px 0;
+    }
+    
+    .profile-parent{
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .profile-details {
+        text-align: center;
+    }
+    
+    .profile-picture{
+        margin: 0 !important;
+    }
+    
+    .profile-options{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .profile-details-name {
+        font-size: 1.6rem;
+    }
+    
+    .profile-details-role h1 {
+        font-size: 1.4rem;
+    }
+    
+    .profile-role-tagline {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    .profile-picture{
+        height: 250px;
+        width: 250px;
+    }
+    
+    .profile-details{
+        width: 100%;
+    }
+    
+    .profile-details-name {
+        font-size: 1.4rem;
+    }
+    
+    .profile-details-role h1 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-options .btn {
+        width: 200px;
+    }
+}
